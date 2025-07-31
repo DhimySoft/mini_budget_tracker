@@ -1,13 +1,15 @@
+import os
 import sqlite3
 
 DB_FILE = "budget.db"
 
-def reset_db():
+def reset_database():
+    """Reset database and insert 30 sample transactions"""
+    if os.path.exists(DB_FILE):
+        os.remove(DB_FILE)
+
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
-
-    # Drop old table if exists
-    cursor.execute("DROP TABLE IF EXISTS transactions")
 
     # Create new table
     cursor.execute("""
@@ -44,7 +46,6 @@ def reset_db():
         ("expense", 8.0, "Food", "Coffee shop"),
         ("expense", 12.5, "Transport", "Uber ride"),
         ("expense", 95.0, "Groceries", "Monthly bulk purchase"),
-
         # Incomes
         ("income", 1500.0, "Salary", "Monthly salary"),
         ("income", 200.0, "Freelance", "Project A"),
@@ -68,4 +69,4 @@ def reset_db():
     print("Database reset and 30 sample transactions inserted successfully.")
 
 if __name__ == "__main__":
-    reset_db()
+    reset_database()

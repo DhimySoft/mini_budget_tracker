@@ -1,0 +1,45 @@
+# mini_budget_tracker/dashboard.py
+import streamlit as st
+import pandas as pd
+import sqlite3
+from pathlib import Path
+
+DB_FILE = Path("budget.db")
+
+def get_data():
+    conn = sqlite3.connect(DB_FILE)
+    df = pd.read_sql_query("SELECT * FROM transactions", conn)
+    conn.close()
+    return df
+
+def main():
+    st.title("Budget Tracker Dashboard")
+    
+    df = get_data()
+    if df.empty:
+        st.warning("No transactions found. Add some data using CLI.")
+        return
+
+    st.subheader("All Transactions")
+    st.dataframe(df)
+
+    # Summary metrics
+    total_income = df[df["type"] == "income"]["amount"].sum()
+    total_expense = df[df["type"] == "expense"]["amount"].sum()
+    balance = total_income - total_expense
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Income", f"${total_income:,.2f}")
+    col2.metric("Total Expense", f"${total_expense:,.2f}")
+    col3.metric("Balance", f"${balance:,.2f}")
+
+    # Expense breakdown by category
+    expense_df = df[df["type"] == "expense"]
+    if not expense_df.empty:
+        category_summary = expense_df.groupby("category")["amount"].sum().reset_index()
+        st.subheader("Expenses by Category")
+        st.bar_chart(category_summary.set_index("category"))
+
+if __name__ == "__main__":
+    main()
+

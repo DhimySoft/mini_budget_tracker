@@ -1,0 +1,2 @@
+[console_scripts]
+budget-saas = mini_budget_tracker.dashboard:run_app

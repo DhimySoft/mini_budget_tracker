@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: budget-saas
+Version: 0.1.0
+Summary: Budget Tracker SaaS with Streamlit
+Author-email: Your Name <your.email@example.com>
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: streamlit>=1.32.0
+Requires-Dist: plotly>=5.0.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: rich>=13.0.0
+Dynamic: license-file
