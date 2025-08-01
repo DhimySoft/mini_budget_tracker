@@ -1,5 +1,9 @@
 # 📈 Monthly & Annual Budget App
 
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](CONTRIBUTING.md)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/DhimySoft/mini_budget_tracker)
+[![Code Size](https://img.shields.io/github/languages/code-size/DhimySoft/mini_budget_tracker.svg)](https://github.com/DhimySoft/mini_budget_tracker)
+[![Last Commit](https://img.shields.io/github/last-commit/DhimySoft/mini_budget_tracker.svg)](https://github.com/DhimySoft/mini_budget_tracker/commits/main)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
@@ -29,24 +33,18 @@ Built with **Python, Streamlit, and SQLite**.
 
 ## 🖥️ Installation
 **Python 3.10+ recommended**
-
+``bash
 git clone https://github.com/DhimySoft/mini_budget_tracker.git
 cd mini_budget_tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
 
+
 📸 Screenshots
 <table> <tr> <td><img src="screenshots/dashboard.png" width="400"/></td> <td><img src="screenshots/transactions.png" width="400"/></td> </tr> <tr> <td><img src="screenshots/add_transaction.png" width="400"/></td> <td><img src="screenshots/settings.png" width="400"/></td> </tr> </table>
 🤝 Contributing
-We welcome contributions of all kinds!
-Please read our Contributing Guide for how to get started.
-
-🌐 Code of Conduct
-We pledge to maintain a friendly and inclusive environment.
-Please read our Code of Conduct.
-
-📜 Changelog
-Track all changes in CHANGELOG.md.
+We welcome contributions from the community!
+See our CONTRIBUTING.md for guidelines on how to get started.
 
 👨‍💻 Author
 Created by Dhimy Jean
