@@ -7,7 +7,6 @@
 [![Forks](https://img.shields.io/github/forks/DhimySoft/mini_budget_tracker?style=social)](https://github.com/DhimySoft/mini_budget_tracker/fork)
 [![Stars](https://img.shields.io/github/stars/DhimySoft/mini_budget_tracker?style=social)](https://github.com/DhimySoft/mini_budget_tracker/stargazers)
 
-
 A lightweight budget tracker for personal and business finances.  
 Built with **Python, Streamlit, and SQLite**.
 
@@ -24,43 +23,34 @@ Built with **Python, Streamlit, and SQLite**.
 ---
 
 ## 🚀 Live Demo
-https://dhimysoft-mini-budget-tracker-dashboard-wbhq5i.streamlit.app/
+**[👉 Launch the App Here](https://dhimysoft-mini-budget-tracker-dashboard-wbhq5i.streamlit.app/)**
 
 ---
 
 ## 🖥️ Installation
 **Python 3.10+ recommended**
-''bash
+
 git clone https://github.com/DhimySoft/mini_budget_tracker.git
 cd mini_budget_tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
 
+📸 Screenshots
+<table> <tr> <td><img src="screenshots/dashboard.png" width="400"/></td> <td><img src="screenshots/transactions.png" width="400"/></td> </tr> <tr> <td><img src="screenshots/add_transaction.png" width="400"/></td> <td><img src="screenshots/settings.png" width="400"/></td> </tr> </table>
+🤝 Contributing
+We welcome contributions of all kinds!
+Please read our Contributing Guide for how to get started.
 
-## 📸 Screenshots
+🌐 Code of Conduct
+We pledge to maintain a friendly and inclusive environment.
+Please read our Code of Conduct.
 
-<table>
-<tr>
-<td><img src="screenshots/dashboard.png" width="400"/></td>
-<td><img src="screenshots/transactions.png" width="400"/></td>
-</tr>
-<tr>
-<td><img src="screenshots/add_transaction.png" width="400"/></td>
-<td><img src="screenshots/settings.png" width="400"/></td>
-</tr>
-</table>
+📜 Changelog
+Track all changes in CHANGELOG.md.
 
----
+👨‍💻 Author
+Created by Dhimy Jean
+Computer Science Student | Python & SQL | Aspiring AI & Software Developer
 
-## 👨‍💻 Author
-Created by **Dhimy Jean**  
-*Computer Science Student | Python & SQL | Aspiring AI & Software Developer*
-
----
-
-## 📄 License
-This project is licensed under the **MIT License** – free for personal and commercial use.
-
-
-
-
+📄 License
+This project is licensed under the MIT License – free for personal and commercial use.
