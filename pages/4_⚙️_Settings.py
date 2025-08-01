@@ -1,92 +1,55 @@
 import streamlit as st
 import time
-from database.db import get_connection, insert_category, insert_type
-from database.sample_data import get_demo_data
+from database.db import clear_all_data, generate_demo_data, get_connection
 
-# --- Clear All Tables ---
-def clear_all_data():
+ADMIN_PASSWORD = "admin123"
+
+def delete_transaction_by_id(txn_id):
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.executescript("""
-        DELETE FROM transactions;
-        DELETE FROM types;
-        DELETE FROM categories;
-    """)
+    cursor.execute("DELETE FROM transactions WHERE id=?", (txn_id,))
     conn.commit()
+    affected = cursor.rowcount
     conn.close()
+    return affected
 
-# --- Generate Demo Data ---
-def generate_demo_data(n=1000):
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    default_types = ["Income", "Expense"]
-    default_categories = ["Salary", "Bonus", "Food", "Transport", "Health", "Entertainment", "Utilities"]
-
-    for t in default_types:
-        cursor.execute("INSERT OR IGNORE INTO types (name) VALUES (?);", (t,))
-    for c in default_categories:
-        cursor.execute("INSERT OR IGNORE INTO categories (name) VALUES (?);", (c,))
-
-    cursor.execute("SELECT name, id FROM types;")
-    type_map = dict(cursor.fetchall())
-    cursor.execute("SELECT name, id FROM categories;")
-    cat_map = dict(cursor.fetchall())
-
-    demo_data = get_demo_data(n)
-    for date, amount, desc, t_type, cat in demo_data:
-        cursor.execute("""
-            INSERT INTO transactions (date, amount, description, type_id, category_id)
-            VALUES (?, ?, ?, ?, ?)
-        """, (date, amount, desc, type_map[t_type], cat_map.get(cat, 1)))
-
-    conn.commit()
-    conn.close()
-
-# --- Settings Page ---
 def app(currency):
+    # --- Unified Gradient Header ---
     st.markdown("""
-        <style>
-        .title {font-size: 2rem; font-weight: 700;}
-        .section-header {margin-top: 30px; font-size: 1.2rem; font-weight: 600; color: #f1f1f1;}
-        .stButton>button {background-color: #FF4B4B; color: white; font-weight: bold;
-                          border-radius: 8px; padding: 0.5rem 1rem;}
-        .stButton>button:hover {background-color: #ff2e2e;}
-        input, textarea {background-color: #1E1E1E !important; color: white !important;}
-        </style>
-        """, unsafe_allow_html=True)
+        <div style="background: linear-gradient(90deg, #4facfe, #43e97b, #f8ffae, #f093fb, #f5576c);
+                    padding: 1rem; border-radius: 15px; text-align: center; 
+                    font-size: 1.5rem; font-weight: bold; color: white;">
+            📈 Monthly & Annual Budget
+        </div>
+        <br>
+    """, unsafe_allow_html=True)
 
-    st.markdown('<p class="title">⚙️ Settings</p>', unsafe_allow_html=True)
+    st.title("⚙️ Settings")
+    st.write("**Password protected actions**")
 
-    # ---- Reset & Restore Demo Data ----
-    st.markdown('<p class="section-header">Database Management</p>', unsafe_allow_html=True)
-    if st.button("Reset & Restore Demo Data (1000 Rows)"):
-        clear_all_data()
-        generate_demo_data(1000)
-        st.success("Database reset and 1000 demo transactions restored successfully!")
-        time.sleep(1)
-        st.rerun()
+    password = st.text_input("Enter admin password", type="password")
 
-    # ---- Add New Category ----
-    st.markdown('<p class="section-header">Add New Category</p>', unsafe_allow_html=True)
-    new_category = st.text_input("Category Name")
-    if st.button("Save Category"):
-        if new_category.strip():
-            insert_category(new_category.strip())
-            st.success(f"Category '{new_category}' added successfully!")
+    if password == ADMIN_PASSWORD:
+        st.success("Access granted!")
+
+        if st.button("Clear ALL Data"):
+            clear_all_data()
+            st.success("Database cleared (all tables empty).")
             time.sleep(1)
             st.rerun()
-        else:
-            st.error("Category name cannot be empty.")
 
-    # ---- Add New Transaction Type ----
-    st.markdown('<p class="section-header">Add New Transaction Type</p>', unsafe_allow_html=True)
-    new_type = st.text_input("Transaction Type Name")
-    if st.button("Save Transaction Type"):
-        if new_type.strip():
-            insert_type(new_type.strip())
-            st.success(f"Transaction type '{new_type}' added successfully!")
+        if st.button("Restore Demo Data (10 Rows)"):
+            generate_demo_data(10)
+            st.success("10 demo transactions inserted successfully!")
             time.sleep(1)
             st.rerun()
-        else:
-            st.error("Transaction type name cannot be empty.")
+
+        delete_id = st.number_input("Transaction ID to delete", min_value=1, step=1)
+        if st.button("Delete This Transaction"):
+            deleted = delete_transaction_by_id(delete_id)
+            if deleted:
+                st.success(f"Transaction ID {delete_id} deleted.")
+            else:
+                st.warning(f"No transaction found with ID {delete_id}")
+    else:
+        st.warning("Enter password to access data management.")

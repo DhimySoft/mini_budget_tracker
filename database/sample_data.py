@@ -24,3 +24,7 @@ def get_demo_data(num_records=1000):
         data.append((date.isoformat(), amount, desc, t_type, category))
 
     return data
+
+
+
+
