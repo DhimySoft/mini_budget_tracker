@@ -21,8 +21,20 @@ Built with **Python, Streamlit, and SQLite**.
 ---
 
 ## 🖥️ Installation
+**Python 3.10+ recommended**
 ```bash
 git clone https://github.com/dhimyjean/budget-tracker.git
 cd budget-tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
+
+
+## 📸 Screenshots
+Here’s a quick look at the app:
+
+![Dashboard](screenshots/dashboard.png)  
+![Transactions](screenshots/transactions.png)  
+![Add Transaction](screenshots/add_transaction.png)  
+![Settings](screenshots/settings.png)
+
+
