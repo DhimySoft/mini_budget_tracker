@@ -26,13 +26,11 @@ Built with **Python, Streamlit, and SQLite**.
 
 ## 🖥️ Installation
 **Python 3.10+ recommended**
-
-
-git clone https://github.com/dhimyjean/budget-tracker.git
-cd budget-tracker
+''bash
+git clone https://github.com/DhimySoft/mini_budget_tracker.git
+cd mini_budget_tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
-
 
 
 ## 📸 Screenshots
