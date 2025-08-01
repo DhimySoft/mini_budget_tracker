@@ -1,23 +1,28 @@
-# Mini Budget Tracker
+# 📈 Monthly & Annual Budget App
 
-A lightweight **command-line Budget Tracker** built with Python, SQLite, and Rich CLI tables.  
-Supports adding expenses and incomes, viewing summaries, exporting data, and running automated tests.
-
----
-
-## **Features**
-- Add and manage **expenses** and **income**  
-- View **summary of income vs expenses**  
-- Delete or clear expenses  
-- Export transactions to **CSV**  
-- Sample database with **30 transactions included** for quick start  
-- Full **automated tests** using `pytest`  
+A lightweight budget tracker for personal and business finances.  
+Built with **Python, Streamlit, and SQLite**.
 
 ---
 
-## **Installation**
+## ✨ Features
+- Add income and expense transactions with type-based auto-calculations.
+- Categorize spending (auto-negative for expense type).
+- Visual summary dashboard:
+  - Monthly net results
+  - Spending by category
+- Secure settings page with password-protected data management.
 
-### **1. Clone the Repository**
+---
+
+## 🚀 Live Demo
+*(Coming soon on Streamlit Cloud)*
+
+---
+
+## 🖥️ Installation
 ```bash
-git clone https://github.com/DhimySoft/mini_budget_tracker.git
-cd mini_budget_tracker
+git clone https://github.com/dhimyjean/budget-tracker.git
+cd budget-tracker
+pip install -r requirements.txt
+streamlit run dashboard.py
