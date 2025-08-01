@@ -26,7 +26,8 @@ Built with **Python, Streamlit, and SQLite**.
 
 ## 🖥️ Installation
 **Python 3.10+ recommended**
-```bash
+
+
 git clone https://github.com/dhimyjean/budget-tracker.git
 cd budget-tracker
 pip install -r requirements.txt
