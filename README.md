@@ -1,8 +1,12 @@
 # 📈 Monthly & Annual Budget App
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
+[![Issues](https://img.shields.io/github/issues/DhimySoft/mini_budget_tracker)](https://github.com/DhimySoft/mini_budget_tracker/issues)
+[![Forks](https://img.shields.io/github/forks/DhimySoft/mini_budget_tracker?style=social)](https://github.com/DhimySoft/mini_budget_tracker/fork)
+[![Stars](https://img.shields.io/github/stars/DhimySoft/mini_budget_tracker?style=social)](https://github.com/DhimySoft/mini_budget_tracker/stargazers)
+
 
 A lightweight budget tracker for personal and business finances.  
 Built with **Python, Streamlit, and SQLite**.
@@ -20,7 +24,7 @@ Built with **Python, Streamlit, and SQLite**.
 ---
 
 ## 🚀 Live Demo
-*(Coming soon on Streamlit Cloud)*
+https://dhimysoft-mini-budget-tracker-dashboard-wbhq5i.streamlit.app/
 
 ---
 
