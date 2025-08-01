@@ -28,13 +28,12 @@ cd budget-tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
 
+📸 Screenshots
+<table> <tr> <td><img src="screenshots/dashboard.png" width="400"/></td> <td><img src="screenshots/transactions.png" width="400"/></td> </tr> <tr> <td><img src="screenshots/add_transaction.png" width="400"/></td> <td><img src="screenshots/settings.png" width="400"/></td> </tr> </table>
+👨‍💻 Author
+Created by Dhimy Jean
+Computer Science Student | Python & SQL | Aspiring AI & Software Developer
 
-## 📸 Screenshots
-Here’s a quick look at the app:
-
-![Dashboard](screenshots/dashboard.png)  
-![Transactions](screenshots/transactions.png)  
-![Add Transaction](screenshots/add_transaction.png)  
-![Settings](screenshots/settings.png)
-
+📄 License
+This project is licensed under the MIT License – free for personal and commercial use.
 
