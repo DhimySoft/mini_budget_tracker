@@ -33,15 +33,16 @@ Built with **Python, Streamlit, and SQLite**.
 
 ## 🖥️ Installation
 **Python 3.10+ recommended**
-``bash
+```bash
 git clone https://github.com/DhimySoft/mini_budget_tracker.git
 cd mini_budget_tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
-
+```
 
 📸 Screenshots
 <table> <tr> <td><img src="screenshots/dashboard.png" width="400"/></td> <td><img src="screenshots/transactions.png" width="400"/></td> </tr> <tr> <td><img src="screenshots/add_transaction.png" width="400"/></td> <td><img src="screenshots/settings.png" width="400"/></td> </tr> </table>
+
 🤝 Contributing
 We welcome contributions from the community!
 See our CONTRIBUTING.md for guidelines on how to get started.
