@@ -1,7 +1,7 @@
 # 📈 Monthly & Annual Budget App
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
 [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
 
 A lightweight budget tracker for personal and business finances.  
@@ -33,7 +33,9 @@ pip install -r requirements.txt
 streamlit run dashboard.py
 
 
+
 ## 📸 Screenshots
+
 <table>
 <tr>
 <td><img src="screenshots/dashboard.png" width="400"/></td>
