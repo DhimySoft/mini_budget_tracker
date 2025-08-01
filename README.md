@@ -1,5 +1,9 @@
 # 📈 Monthly & Annual Budget App
 
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
+
 A lightweight budget tracker for personal and business finances.  
 Built with **Python, Streamlit, and SQLite**.
 
@@ -28,12 +32,26 @@ cd budget-tracker
 pip install -r requirements.txt
 streamlit run dashboard.py
 
-📸 Screenshots
-<table> <tr> <td><img src="screenshots/dashboard.png" width="400"/></td> <td><img src="screenshots/transactions.png" width="400"/></td> </tr> <tr> <td><img src="screenshots/add_transaction.png" width="400"/></td> <td><img src="screenshots/settings.png" width="400"/></td> </tr> </table>
-👨‍💻 Author
-Created by Dhimy Jean
-Computer Science Student | Python & SQL | Aspiring AI & Software Developer
 
-📄 License
-This project is licensed under the MIT License – free for personal and commercial use.
+## 📸 Screenshots
+<table>
+<tr>
+<td><img src="screenshots/dashboard.png" width="400"/></td>
+<td><img src="screenshots/transactions.png" width="400"/></td>
+</tr>
+<tr>
+<td><img src="screenshots/add_transaction.png" width="400"/></td>
+<td><img src="screenshots/settings.png" width="400"/></td>
+</tr>
+</table>
 
+---
+
+## 👨‍💻 Author
+Created by **Dhimy Jean**  
+*Computer Science Student | Python & SQL | Aspiring AI & Software Developer*
+
+---
+
+## 📄 License
+This project is licensed under the **MIT License** – free for personal and commercial use.
