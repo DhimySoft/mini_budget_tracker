@@ -53,3 +53,12 @@ Computer Science Student | Python & SQL | Aspiring AI & Software Developer
 
 📄 License
 This project is licensed under the MIT License – free for personal and commercial use.
+## 🚀 Live Demo
+**[👉 Launch the App Here](https://dhimysoft-mini-budget-tracker-dashboard-wbhq5i.streamlit.app/)**  
+> **Note:** This live demo uses a **demo dataset** for showcase purposes only. All transactions and balances are sample data.
+
+
+## 🚀 Live Demo
+**[👉 Launch the App Here](https://dhimysoft-mini-budget-tracker-dashboard-wbhq5i.streamlit.app/)**  
+> **Note:** This live demo uses a **demo dataset** for showcase purposes only. All transactions and balances are sample data.
+

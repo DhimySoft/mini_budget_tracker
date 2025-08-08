@@ -10,3 +10,5 @@ Thanks for your interest in contributing!
    ```bash
    git clone https://github.com/<your-username>/mini_budget_tracker.git
    cd mini_budget_tracker
+
+[![GitHub release](https://img.shields.io/github/v/release/DhimySoft/mini_budget_tracker)](https://github.com/DhimySoft/mini_budget_tracker/releases)

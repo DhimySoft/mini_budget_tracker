@@ -76,7 +76,7 @@ def app(currency):
         text_auto=True,
         template="plotly_dark"
     )
-    fig_cat.update_layout(width=1200, height=500)  # wider
+    fig_cat.update_layout(width=12000, height=500)  # wider
 
     # --- Display side by side ---
     col1, col2 = st.columns(2)
